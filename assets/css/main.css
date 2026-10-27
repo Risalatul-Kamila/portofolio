@@ -1502,6 +1502,51 @@ section,
   margin-bottom: 0;
 }
 
+/* LinkedIn-style grouped roles under one company */
+.resume .experience-section .company-group .role-item {
+  position: relative;
+  padding-left: 1.75rem;
+  padding-bottom: 1.5rem;
+}
+
+.resume .experience-section .company-group .role-item:last-child {
+  padding-bottom: 0;
+}
+
+/* dot */
+.resume .experience-section .company-group .role-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent-color);
+}
+
+/* connector line under each role */
+.resume .experience-section .company-group .role-item::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1.2rem;
+  bottom: 0;
+  width: 2px;
+  background: color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+.resume .experience-section .company-group .role-item h4 {
+  color: var(--accent-color);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.resume .experience-section .company-group .role-item .card-body {
+  margin-top: 0.75rem;
+}
+
 .resume .education-section {
   padding-left: 1.5rem;
 }
